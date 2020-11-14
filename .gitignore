@@ -1,0 +1,6 @@
+.terraform
+.idea
+.vscode
+.vagrant
+*.json
+token_drive_v3.pickle
