@@ -19,7 +19,7 @@ api = core_v1_api.CoreV1Api()
 exec_command = ['/bin/sh',
                 '-c',
                 'curl -u user:ZCLw9NBayhrYAA3n http://127.0.0.1:15672/api/nodes']
-resp = stream(api.connect_get_namespaced_pod_exec, 'api-staging-0', 'staging',
+resp = stream(api.connect_get_namespaced_pod_exec, 'rabbitmq-staging-0', 'staging',
                                             command=exec_command,
                                             stdout=True, tty=False)
 

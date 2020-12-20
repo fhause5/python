@@ -3,4 +3,5 @@
 .vscode
 .vagrant
 *.json
+.json
 token_drive_v3.pickle
