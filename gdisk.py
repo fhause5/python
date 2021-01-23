@@ -2,7 +2,6 @@ import os, io, pickle, shutil, json, time, sys
 import pandas as pd
 from distutils.dir_util import copy_tree
 from datetime import datetime, timedelta
-from apiclient import errors
 from pprint import pprint
 from googleapiclient.http import MediaFileUpload
 from googleapiclient.http import MediaIoBaseDownload
@@ -12,7 +11,7 @@ from googleapiclient.http import MediaFileUpload, MediaIoBaseDownload
 from google.auth.transport.requests import Request
 
 client_secret_file = sys.argv[1]
-dir_name_path = ['~/README/', '~/keys/']
+dir_name_path = ['~/README/', '~/keys/', '~/.kube/', '~/.ssh/', '~/.aws/']
 g_dir_id = '1grorYnaBx35kuiBEOIaWjegksI0xJO3W'
 
 z_datetime = time.strftime('%d-%m-%Y')
