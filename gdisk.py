@@ -83,6 +83,7 @@ def Create_Service(client_secret_file, api_name, api_version, *scopes):
 #     #pprint(response)
 #     for i, f in response.get('storageQuota').items():
 #         print('{0}: {1:.2f}MB'.format(i, int(f) / 1024 ** 3))
+# Tha main functions
 def downloads(files_name, files_ids, dowloads_path):
     for files_id, file_name in zip(files_ids, files_name):
         request = service.files().get_media(fileId=files_id)
@@ -95,8 +96,7 @@ def downloads(files_name, files_ids, dowloads_path):
         with open(os.path.join(dowloads_path, file_name), 'wb') as f:
             f.write(fh.read())
             f.close()
-
-# Tha main functions
+            
 def gget_file_id(g_dir_id, delete_days):
     resp = service.files().list(q="'"+g_dir_id+"' in parents").execute()
     json_string = json.dumps(resp)

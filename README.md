@@ -1,6 +1,6 @@
 # python
 
-### gdisk
+### gdisk (The first time authentication)
 
 ```
 
